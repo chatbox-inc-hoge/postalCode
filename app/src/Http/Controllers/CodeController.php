@@ -22,11 +22,14 @@ class CodeController extends ControllerRest{
 
     public function getCode($code){
         $result = \Chatbox\PostalCode\Eloquent\RawData::getByCode($code);
+        if($result){
+            return $this->responseOk([
+                "addressList" => $result
+            ]);
+        }else{
+            return $this->responseBadMessage("cant find address");
+        }
 
-
-        return $this->responseOk([
-            "addressList" => $result
-        ]);
     }
 
 }
