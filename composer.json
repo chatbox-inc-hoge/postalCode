@@ -12,7 +12,7 @@
         }
     },
     "require": {
-        "chatbox/rumic": "dev-master",
-        "chatbox/phputil": "dev-master"
+        "chatbox/rumic": "0.1",
+        "chatbox/phputil": "0.1"
     }
 }
